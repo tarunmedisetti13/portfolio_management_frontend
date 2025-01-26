@@ -1,13 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
+import WelcomeScreen from "./components/WelcomeScreen"; // Import WelcomeScreen
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/Signup";
 import Dashboard from "./components/Dashboard";
 import PortfolioDetails from "./components/PortfolioDetails";
 import PortfolioList from "./components/PortfolioList"; // Import PortfolioList
 import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
 import ForgotPassword from "./components/ForgotPassword";
 import MarketInsights from "./components/MarketInsights";
+import ChangePassword from "./components/ChangePassword"; // Import the ChangePassword component
 
 const App = () => {
   const location = useLocation();
@@ -16,7 +25,7 @@ const App = () => {
   const isLoggedIn = localStorage.getItem("authToken");
 
   // Define routes where the Navbar should not be displayed
-  const noNavbarRoutes = ["/", "/login", "/signup", "/forgot-password"];
+  const noNavbarRoutes = ["/", "/welcome", "/login", "/signup", "/forgot-password"];
 
   return (
     <div className="page-content">
@@ -24,8 +33,10 @@ const App = () => {
       {!noNavbarRoutes.includes(location.pathname) && isLoggedIn && <Navbar />}
 
       <Routes>
+        {/* Welcome Screen */}
+        <Route path="/" element={<WelcomeScreen />} />
+
         {/* Public routes */}
-        <Route path="/" element={<LoginForm />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
@@ -47,6 +58,11 @@ const App = () => {
           path="/portfolio/:portfolioId"
           element={isLoggedIn ? <PortfolioDetails /> : <Navigate to="/login" />}
         />
+        <Route
+          path="/change-password"
+          element={isLoggedIn ? <ChangePassword /> : <Navigate to="/login" />}
+        />
+        <Route path="/Profile" element={Profile}></Route>
       </Routes>
     </div>
   );
