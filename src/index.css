@@ -1,0 +1,24 @@
+:root {
+  --primary-color: #4CAF50;
+  /* Green */
+  --secondary-color: #ffffff;
+  /* White */
+  --border-color: #dddddd;
+  /* Light Gray */
+  --hover-color: #f1f1f1;
+  /* Light Hover Gray */
+  --text-color: #333333;
+  /* Dark Gray */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: var(--text-color);
+}

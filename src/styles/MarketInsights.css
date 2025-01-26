@@ -1,0 +1,65 @@
+.market-insights-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.stock-price-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.stock-price-info h2 {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    /* Example font style */
+    color: #333;
+    /* Lighter color */
+}
+
+.stock-price-info p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    /* Example different font */
+    color: rgb(233, 13, 13);
+    /* Default to green for positive amounts */
+}
+
+.stock-price-info p.negative {
+    color: red;
+    /* If negative, change to red */
+}
+
+.stock-price-info p::before {
+    /* Add dollar symbol before the value */
+    font-weight: normal;
+}

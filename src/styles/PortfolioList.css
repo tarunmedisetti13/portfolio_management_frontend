@@ -1,0 +1,235 @@
+/* Portfolio List Styles */
+.portfolio-list {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-list h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.create-portfolio-btn-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+
+.create-portfolio-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.create-portfolio-btn:hover {
+    background-color: #45a049;
+}
+
+.portfolio-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-list li {
+    background-color: #e3ecea;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-size: 1rem;
+    color: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+}
+
+.portfolio-list li:hover {
+    background-color: #1abc9c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.portfolio-item-with-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.portfolio-list li .portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Keep items vertically aligned */
+    width: 100%;
+    min-height: 50px;
+    min-width: 300px;
+    /* Ensure each portfolio item has consistent height */
+}
+
+.portfolio-list li .portfolio-item a {
+    flex-grow: 1;
+    /* Allow the portfolio name to take up available space */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.portfolio-list li .portfolio-item button {
+    margin-left: 10px;
+    /* Ensure consistent spacing between buttons */
+}
+
+
+
+.portfolio-list li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 70px);
+}
+
+.portfolio-list .delete-btn {
+    position: relative;
+    margin-left: 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 7px 15px;
+    font-size: 1rem;
+}
+
+.portfolio-list .delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Add this class to change color when in delete confirmation mode */
+.portfolio-list .delete-btn.confirm-delete {
+    background-color: #e74c3c;
+    /* Lighter red color for confirmation */
+}
+
+.portfolio-list .delete-btn.confirm-delete:hover {
+    background-color: #c0392b;
+    /* Darker red for confirmation hover */
+}
+
+
+
+.portfolio-list .edit-btn {
+    padding: 7px 15px;
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.portfolio-list .edit-btn:hover {
+    background-color: #e09305;
+}
+
+/* Modal Styles for Create and Edit Portfolio */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-portfolio-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-portfolio-form input,
+.create-portfolio-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.create-portfolio-form textarea {
+    resize: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Modal Buttons for Delete Confirmation */
+.modal-buttons button {
+    display: inline-block;
+    padding: 10px 20px;
+    /* Equal padding for both buttons */
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 150px;
+    /* Set a fixed width for both buttons */
+    height: 40px;
+    /* Set a fixed height for both buttons */
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Styling for the Confirm Delete Button */
+.modal-buttons .btn2 {
+    background-color: #e74c3c;
+    outline: none;
+    border: none;
+}
+
+.modal-buttons .btn2:hover {
+    background-color: #c0392b;
+}
+
+/* Styling for the Cancel Button */
+.modal-buttons .btn1 {
+    outline: none;
+    border: none;
+    background-color: #4caf50;
+}
+
+.modal-buttons .btn1:hover {
+    background-color: #45a049;
+}

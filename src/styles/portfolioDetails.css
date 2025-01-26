@@ -1,0 +1,307 @@
+/* PortfolioDetails.css */
+
+/* Body padding to ensure content isn't hidden under the navbar */
+body {
+    padding-top: 80px;
+    /* Adjust based on your navbar height */
+}
+
+.portfolio-all-details {
+    min-width: 1000px;
+}
+
+.portfolio-details {
+    margin-top: 20px;
+}
+
+/* Portfolio info styling */
+.portfolio-info {
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: linear-gradient(135deg, #dfe6e9, #a4b0be);
+    /* Soft neutral gradient */
+    color: #333;
+    /* Default text color */
+}
+
+/* Portfolio name styling */
+.portfolio-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Description text styling */
+.portfolio-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Date styling at top right */
+.portfolio-date {
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+    font-style: italic;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* New stock button styling */
+.add-stock-btn,
+.cancel-btn {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.add-stock-btn {
+    background-color: #4CAF50;
+}
+
+.add-stock-btn:hover {
+    background-color: #45a049;
+}
+
+/* Modal styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.result-btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Cancel button in stock creation/updation modal */
+.cancel-btn {
+    background-color: #ed2e20;
+    /* Red color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #e53935;
+    /* Slightly darker red on hover */
+}
+
+.action-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dlt-text {
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+.stocks-table-container {
+    max-height: 400px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    min-height: 200px;
+    /* Prevents shrinking */
+}
+
+.stocks-table-container p {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+.stocks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stocks-table th,
+.stocks-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+
+.stocks-table th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.stocks-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.stocks-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.stocks-table td {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stocks-table {
+        font-size: 14px;
+    }
+
+    .stocks-table th,
+    .stocks-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stocks-table {
+        font-size: 12px;
+    }
+}
+
+/* Edit Button Styling */
+.edit-btn {
+    padding: 6px 12px;
+    background-color: #ffa500;
+    /* Orange background for edit */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+}
+
+.edit-btn:hover {
+    background-color: #ff8c00;
+    /* Darker orange for hover */
+}
+
+
+/* Add this to PortfolioDetails.css */
+
+.delete-btn {
+    padding: 6px 12px;
+    background-color: #ff4d4d;
+    /* Red background for delete */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Read-only input styling */
+.readonly-input {
+    background-color: #f5f5f5;
+    /* Light grey background */
+    color: #888;
+    /* Slightly muted text color */
+    border: 1px solid #ccc;
+    /* Border to match other inputs */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: not-allowed;
+    /* Indicate that it is non-editable */
+}
+
+.readonly-input:focus {
+    outline: none;
+    /* Prevent focus outline */
+    box-shadow: none;
+    /* Prevent focus effect */
+}
+
+.confirm-dlt-btn {
+    padding: 6px 12px;
+    background-color: #ff4d4d;
+    /* Red background for delete */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-cancel-btn {
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    /* Red background for delete */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.dashboard-container h1 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Portfolio List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+li:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+}
+
+/* Portfolio Links */
+li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0073e6;
+    transition: color 0.2s ease;
+}
+
+li a:hover {
+    color: #005bb5;
+}
+
+/* Add Portfolio Button */
+.add-portfolio-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.add-portfolio-btn:hover {
+    background-color: #218838;
+}
